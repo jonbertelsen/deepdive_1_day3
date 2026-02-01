@@ -45,7 +45,5 @@ public class Main
          }
         System.out.println(">>>>>>>> Trim now removed");
         taskList.forEach(System.out::println);
-
-
     }
 }

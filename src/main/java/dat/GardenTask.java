@@ -1,12 +1,7 @@
 package dat;
 
-import lombok.Getter;
-import lombok.ToString;
-
 import java.time.LocalDate;
 
-@Getter
-@ToString(callSuper = true)
 public class GardenTask extends Task
 {
     private String gardenLocation;
@@ -15,5 +10,14 @@ public class GardenTask extends Task
     {
         super(title, description, dueDate);
         this.gardenLocation = gardenLocation;
+    }
+
+    public String getGardenLocation() {
+        return gardenLocation;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s", super.toString(), getGardenLocation() );
     }
 }
